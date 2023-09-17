@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 300ms;
+
 }
 
 html {
@@ -13,11 +14,71 @@ body {
   background-color: #10AAB8;
 }
 
+.qwerty {
+  background-color: #10AAB8;
+  width: 1628px;
+  height: 60px;
+}
+
+#qwerty1 {
+  position: absolute;
+  left: 1250px;
+}
+
+#qwerty3 {
+  position: absolute;
+  left: 1070px;
+}
+
+#hoho {
+  position: absolute;
+  font-family: Consolas-sans-serif;
+  font-size: 40px;
+  left: 65px;
+  top: 15px;
+  color: #fcc06e;
+
+}
+
+figure {
+  font-family: Verdana;
+  font-size: 120%;
+  color: #fcc06e;
+  position: relative;
+  left: 500px;
+}
+
+.has1 {
+  width: 1628px;
+  height: 750px;
+
+}
+
+.has {
+  position: relative;
+  bottom: 111px;
+  z-index: -1;
+
+}
+
 h1 {
   color: white;
   font-size: 100px;
   text-align: center;
   font-family: Verdana, sans-serif;
+  position: relative;
+  top: 300px;
+  right: 100px;
+}
+
+#b1 {
+  position: relative;
+  bottom: 165px;
+}
+
+#hihi {
+  position: relative;
+
 }
 
 h2 {
@@ -43,7 +104,7 @@ h3 {
 
 table {
   position: absolute;
-  left: 39%;
+  left: 73%;
 }
 
 .custom-table {
@@ -67,17 +128,18 @@ table {
   border-bottom: 2px solid #000;
 }
 
-#container {
+.container {
   background-color: #10AAB8;
   width: 1528px;
   height: 600px;
+  padding: 15px;
 
 }
 
 .boxwcontent {
   display: block;
   text-align: center;
-  width: 1528px;
+  width: 1628px;
   height: 300px;
   font-size: 15px;
   background: white;
@@ -100,7 +162,7 @@ table {
   display: block;
   text-align: center;
   background: #b3d4fc;
-  width: 1528px;
+  width: 1628px;
   height: 300px;
   font-size: 15px;
   padding-left: 600px;
@@ -122,8 +184,8 @@ table {
 .aqtobe {
   display: block;
   text-align: center;
-  background: lightpink;
-  width: 1528px;
+  background: white;
+  width: 1628px;
   height: 300px;
   font-size: 15px;
   padding-left: 100px;
