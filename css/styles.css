@@ -39,7 +39,6 @@ button {
 h3 {
   text-align: left;
   font-family: Canela, serif;
-  color: white;
 }
 
 table {
@@ -81,8 +80,9 @@ table {
   width: 1528px;
   height: 300px;
   font-size: 15px;
-  background: lightpink;
+  background: white;
   padding: 100px;
+  color: #10AAB8;
 }
 
 .inner {
@@ -105,6 +105,7 @@ table {
   font-size: 15px;
   padding-left: 600px;
   padding-top: 100px;
+  color: rebeccapurple;
 }
 
 .inas {
@@ -127,6 +128,7 @@ table {
   font-size: 15px;
   padding-left: 100px;
   padding-top: 100px;
+  color: #10AAB8;
 }
 
 .inaq {
@@ -147,8 +149,8 @@ iframe {
   left: 24%;
 }
 
-.hash {
-  width: 100%;
+.hh {
+  width: 1628px;
   height: 30px;
   border: maroon;
   background-color: #b3d4fc;
@@ -172,11 +174,19 @@ iframe {
 }
 
 .copy {
+  color: darkblue;
   position: relative;
   background: #b3d4fc;
+  width: 1628px;
   height: 300px;
   padding-top: 50px;
   padding-left: 100px;
+}
+
+h5 {
+  position: relative;
+  left: 900px;
+  bottom: 220px;
 }
 
 #dia {
