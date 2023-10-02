@@ -1,19 +1,127 @@
+/* Reset Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: all 300ms;
-
 }
 
+/* Smooth Scrolling for HTML */
 html {
   scroll-behavior: smooth;
 }
 
+/* Body Styles */
 body {
   background-color: #10AAB8;
 }
 
+/* Header Styles */
+h1 {
+  color: white;
+  font-size: 100px;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  position: relative;
+  top: 265px;
+  right: 100px;
+}
+
+h2 {
+  text-align: center;
+  font-family: Abril Fatface, emoji;
+  color: white;
+}
+
+/* Subheader Styles */
+h3 {
+  text-align: left;
+  font-family: Canela, serif;
+}
+
+h5 {
+  position: relative;
+  left: 900px;
+  bottom: 195px;
+}
+
+h6 {
+  color: #222222;
+  display: flex;
+}
+
+/* Almaty Section Styles */
+.almaty {
+  display: block;
+  text-align: center;
+  width: 1628px;
+  height: 300px;
+  font-size: 15px;
+  background: white;
+  padding: 100px;
+  color: #10AAB8;
+}
+
+.inner {
+  position: relative;
+  bottom: 180px;
+  left: 1450px;
+  transition: transform 900ms;
+}
+
+.almaty:hover .inner {
+  transform: translateX(-600px);
+}
+
+/* Astana Section Styles */
+.astana {
+  display: block;
+  text-align: center;
+  background: #b3d4fc;
+  width: 1628px;
+  height: 300px;
+  font-size: 15px;
+  padding-left: 600px;
+  padding-top: 100px;
+  color: rebeccapurple;
+}
+
+.inas {
+  position: relative;
+  bottom: 160px;
+  right: 1225px;
+  transition: transform 900ms;
+}
+
+.astana:hover .inas {
+  transform: translateX(725px);
+}
+
+/* Aqtobe Section Styles */
+.aqtobe {
+  display: block;
+  text-align: center;
+  background: white;
+  width: 1628px;
+  height: 300px;
+  font-size: 15px;
+  padding-left: 100px;
+  padding-top: 100px;
+  color: #10AAB8;
+}
+
+.inaq {
+  position: relative;
+  bottom: 170px;
+  left: 1450px;
+  transition: transform 900ms;
+}
+
+.aqtobe:hover .inaq {
+  transform: translateX(-600px);
+}
+
+/* Qwerty Styles */
 .qwerty {
   background-color: #10AAB8;
   width: 1628px;
@@ -37,9 +145,9 @@ body {
   left: 65px;
   top: 15px;
   color: #fcc06e;
-
 }
 
+/* Figure Styles */
 figure {
   font-family: Verdana;
   font-size: 120%;
@@ -48,43 +156,22 @@ figure {
   left: 500px;
 }
 
+/* Other Styles */
 .has1 {
   width: 1628px;
   height: 750px;
-
 }
 
 .has {
   position: relative;
   bottom: 111px;
+  float: right;
   z-index: -1;
-
-}
-
-h1 {
-  color: white;
-  font-size: 100px;
-  text-align: center;
-  font-family: Verdana, sans-serif;
-  position: relative;
-  top: 300px;
-  right: 100px;
 }
 
 #b1 {
   position: relative;
-  bottom: 165px;
-}
-
-#hihi {
-  position: relative;
-
-}
-
-h2 {
-  text-align: center;
-  font-family: Abril Fatface, emoji;
-  color: white;
+  bottom: 190px;
 }
 
 button {
@@ -97,11 +184,7 @@ button {
   font-size: 16px;
 }
 
-h3 {
-  text-align: left;
-  font-family: Canela, serif;
-}
-
+/* Table Styles */
 table {
   position: absolute;
   left: 73%;
@@ -128,82 +211,15 @@ table {
   border-bottom: 2px solid #000;
 }
 
-.container {
+/* Container2 Styles */
+.container2 {
   background-color: #10AAB8;
   width: 1528px;
   height: 600px;
   padding: 15px;
-
 }
 
-.boxwcontent {
-  display: block;
-  text-align: center;
-  width: 1628px;
-  height: 300px;
-  font-size: 15px;
-  background: white;
-  padding: 100px;
-  color: #10AAB8;
-}
-
-.inner {
-  position: relative;
-  bottom: 180px;
-  left: 1450px;
-  transition: transform 900ms;
-}
-
-.boxwcontent:hover .inner {
-  transform: translateX(-600px);
-}
-
-.astana {
-  display: block;
-  text-align: center;
-  background: #b3d4fc;
-  width: 1628px;
-  height: 300px;
-  font-size: 15px;
-  padding-left: 600px;
-  padding-top: 100px;
-  color: rebeccapurple;
-}
-
-.inas {
-  position: relative;
-  bottom: 160px;
-  right: 1225px;
-  transition: transform 900ms;
-}
-
-.astana:hover .inas {
-  transform: translateX(725px);
-}
-
-.aqtobe {
-  display: block;
-  text-align: center;
-  background: white;
-  width: 1628px;
-  height: 300px;
-  font-size: 15px;
-  padding-left: 100px;
-  padding-top: 100px;
-  color: #10AAB8;
-}
-
-.inaq {
-  position: relative;
-  bottom: 170px;
-  left: 1450px;
-  transition: transform 900ms;
-}
-
-.aqtobe:hover .inaq {
-  transform: translateX(-600px);
-}
-
+/* Iframe Styles */
 iframe {
   width: 800px;
   height: 400px;
@@ -211,6 +227,7 @@ iframe {
   left: 24%;
 }
 
+/* Header Section Styles */
 .hh {
   width: 1628px;
   height: 30px;
@@ -219,6 +236,7 @@ iframe {
   align-items: center;
 }
 
+/* Form Styles */
 .form {
   position: relative;
   font-family: Arial, sans-serif;
@@ -235,6 +253,7 @@ iframe {
   left: 600px;
 }
 
+/* Copy Section Styles */
 .copy {
   color: darkblue;
   position: relative;
@@ -245,12 +264,7 @@ iframe {
   padding-left: 100px;
 }
 
-h5 {
-  position: relative;
-  left: 900px;
-  bottom: 220px;
-}
-
+/* Dia ID Styles */
 #dia {
   border: 3px outset black;
   background-color: #10AAB8;
@@ -258,4 +272,25 @@ h5 {
   margin: 10%;
 }
 
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: center;
+}
 
+/* Carousel Styles */
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Demo ID Styles */
+#demo {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Kalas ID Styles */
+#kalas {
+  background-color: #999999;
+}
