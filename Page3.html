@@ -1,14 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
   <meta charset="UTF-8">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/x-icon" href="img_1.png">
+  <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/008/994/746/original/bnm-logo-bnm-letter-bnm-letter-logo-design-initials-bnm-logo-linked-with-circle-and-uppercase-monogram-logo-bnm-typography-for-technology-business-and-real-estate-brand-vector.jpg">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <title>BNM</title>
 </head>
 <body>
+<input type="number" class="time">
+<button type="submit" onclick="startCountdown()">Start</button>
+<button type="reset" onclick="resetCountdown()">Reset</button>
+<p class="countdown"></p>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-sm justify-content-center navbar-light" style="background-color: #10AAB8">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="tma.html" style="color: #fcc06e">BNM</a>
+    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="tma.html" style="color: #fcc06e">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="" style="color: #fcc06e">ASTANA</a></li>
+      <li class="nav-item"><a class="nav-link" href="" style="color: #fcc06e">ALMATY</a></li>
+      <li class="nav-item"><a class="nav-link" href="" style="color: #fcc06e">KARAGANDA</a></li>
+      <li class="nav-item">  <a href="#buynow2" class="buton nav-link" style="background-color: #b3d4fc"><span>Buy now</span></a></li>
+      <li class="nav-item">
+        <!-- Dropdown menu -->
+        <div class="dropdown" style="display: inline-block">
+          <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">Travel</button>
+          <ul class="dropdown-menu" style="position: absolute;">
+            <!-- Dropdown menu items -->
+            <li><a class="dropdown-item" href="tma.html">Main</a></li>
+            <li><a class="dropdown-item" href="Page1.html">Page1</a></li>
+            <li><a class="dropdown-item" href="Page2.html">Page 2</a></li>
+            <li><a class="dropdown-item" href="Page3.html">Page 3</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <!-- Carousel indicators (dots to navigate) -->
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
 
+
+  <div class="carousel-inner">
+    <!-- Carousel items -->
+    <div class="carousel-item active">
+      <img
+        src="https://avatars.mds.yandex.net/i?id=799c939132c0205a038e71a3721a473912b2c59b-9145401-images-thumbs&n=13 "
+        alt="Astana" class="d-block" style="width:100%">
+
+
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://avatars.mds.yandex.net/i?id=9f9395b9453edbd26003f2c3ee16ed6e47c9ad36-10850463-images-thumbs&n=13"
+        alt="KARAGANDY" class="d-block" style="width:100%">
+
+
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://avatars.mds.yandex.net/i?id=4e5a40f0f072d4f61313e205e5c314880037a33f-10766712-images-thumbs&n=13"
+        alt="almaty" class="d-block"
+        style="width:100%">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<hr>
+<!-- The container for the tab buttons -->
+<div id="tabs">
+  <button id="tab1" class="tab-button">Astana</button>
+  <button id="tab2" class="tab-button">Almaty</button>
+  <button id="tab3" class="tab-button">Karaganda</button>
+</div>
+<div id="content">
+  <div id="tab-content-1" class="tab-content" style="color:#fcc06e">Astana is located in the north of the country, on the banks of the Ishim River.</div>
+  <div id="tab-content-2" class="tab-content" style="color:#fcc06e">Almaty is a city of republican significance and the largest settlement of the Republic of Kazakhstan. Almaty is located in the south-east of Kazakhstan.</div>
+  <div id="tab-content-3" class="tab-content" style="color:#fcc06e">Karaganda (also spelled Karagandy) is city and administrative center of Karaganda oblast (region) of Kazakhstan. Karaganda is situated at the center of important Karaganda coal basin (the word “karaganda” from Kazakh language means “black city”). Karaganda is the second largest city of Kazakhstan.</div>
+</div>
+<hr>
+<button class="accordion" id="astana">Astana</button>
+<div class="panel">
+  <p id="astana-description"></p>
+</div>
+
+<button class="accordion" id="almaty">Almaty</button>
+<div class="panel">
+  <p id="almaty-description"></p>
+</div>
+
+<button class="accordion" id="karaganda">Karaganda</button>
+<div class="panel">
+  <p id="karaganda-description"></p>
+</div>
+
+<script>
+  var cities = {
+    "astana": "Astana is the capital city of Kazakhstan. Located in the north-central part of the country, this vibrant city has undergone significant transformation and growth over the years.",
+    "almaty": "Almaty is the largest city in Kazakhstan and one of its most vibrant and culturally rich urban centers.",
+    "karaganda": "Karaganda, also spelled Karagandy, is a prominent city and administrative center of the Karaganda Region in Kazakhstan. It holds the distinction of being the second-largest city in the country, making it a vital urban hub in Central Asia."
+  };
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      var cityId = this.id;
+      var descriptionElement = document.getElementById(cityId + "-description");
+
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+        panel.innerHTML = "<p>" + cities[cityId] + "</p>";
+      }
+    });
+  }
+</script>
+<script>
+  // Get all tab buttons and tab contents
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  // Add a click event listener to each tab button
+  tabButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      // Hide all tab contents
+      tabContents.forEach(content => content.style.display = 'none');
+      // Show the selected tab content
+      tabContents[index].style.display = 'block';
+    });
+  });
+
+</script>
+<hr>
+<!-- Astana Section -->
+<section class="sec-1 show-animate">
+<div class="mb-3">
+  <div class="container animate" style="background-color: lightblue">
+    <div class="row">
+      <div class="col-md-6 animate">
+        <div class="card"><img
+          src="https://avatars.mds.yandex.net/i?id=799c939132c0205a038e71a3721a473912b2c59b-9145401-images-thumbs&n=13">
+          <div class="card-body" style="background-color: lightblue">
+            <button class="btn btn-info" id="playSoundButton">Astana</button>
+            <script>
+              var audio = new Audio('Astana.mp3');
+
+              document.getElementById('playSoundButton').addEventListener('click', function() {
+                audio.play();
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 animate">
+        <ul class="list-group list-group-horizontal">
+          <!-- List items for Astana -->
+          <li class="list-group-item list-group-item-info" data-id="1">Modern architecture
+          </li>
+          <li class="list-group-item list-group-item-info" data-id="2">Historical sites
+          </li>
+          <li class="list-group-item list-group-item-info" data-id="3">Parks and green areas
+          </li>
+          <li class="list-group-item list-group-item-info"></li>
+        </ul>
+        <div class="attraction-descriptionAstana">
+          <p class="attraction-textAstana"></p>
+        </div>
+
+        <script>
+          const attractionsAstana = {
+            1: "Modern architecture: Astana is famous for its unique modern architecture, including the symbol of the city - the Baiterek Monument and the Government Building of the Republic of Kazakhstan, which makes it incredible for lovers of architectural masterpieces.",
+            2: "Historical sites: Despite its modernity, the city also offers a rich historical heritage, including museums and monuments such as the mausoleum of Khoja Ahmed Yasawi and the Hazret Sultan Mosque.",
+            3: "Parks and green areas: Nur-Sultan has beautiful parks and embankments, such as Astana Riverside and Astana Botany, where tourists can relax and enjoy nature.",
+          };
+
+          const listItemsAstana = document.querySelectorAll(".list-group-item");
+          const attractionTextAstana = document.querySelector(".attraction-textAstana");
+
+          listItemsAstana.forEach(item => {
+            item.addEventListener("mouseover", () => {
+              const attractionId = item.getAttribute("data-id");
+              attractionTextAstana.textContent = attractionsAstana[attractionId];
+            });
+
+            item.addEventListener("mouseout", () => {
+              attractionTextAstana.textContent = "";
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="sec-2">
+<!-- Almaty Section -->
+<div class="mb-3">
+  <div class="container animate" style="background-color:lightblue">
+    <div class="row">
+      <div class="col-md-6 animate">
+        <div class="card"><img
+          src="https://avatars.mds.yandex.net/i?id=4e5a40f0f072d4f61313e205e5c314880037a33f-10766712-images-thumbs&n=13"
+          width="100%" height="100%">
+          <div class="card-body" style="background-color: lightblue">
+            <button class="btn btn-info">Almaty</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 animate">
+        <ul class="list-group list-group-horizontal">
+          <!-- List items for Almaty -->
+          <li class="list-group-item list-group-item-info" data-id="1">Natural wealth</li>
+          <li class="list-group-item list-group-item-info" data-id="2">Cultural heritage</li>
+          <li class="list-group-item list-group-item-info" data-id="3">Modern architecture</li>
+        </ul>
+      </div>
+
+      <div class="attraction-description">
+        <p class="attraction-text"></p>
+      </div>
+
+      <script>
+        const attractions = {
+          1: "Natural wealth: Almaty is surrounded by the magnificent Tien Shan Mountains, which makes it an ideal place for lovers of outdoor activities, mountain hikes and winter sports.",
+          2: "Cultural heritage: The city is rich in cultural and historical attractions, including museums, monuments and architectural masterpieces such as Panfilov Park and Zenkov Cathedral.",
+          3: "Modern architecture: Almaty features a blend of modern architectural marvels, providing a unique contrast to its natural beauty.",
+        };
+
+        const listItems = document.querySelectorAll(".list-group-item");
+        const attractionText = document.querySelector(".attraction-text");
+
+        listItems.forEach(item => {
+          item.addEventListener("mouseover", () => {
+            const attractionId = item.getAttribute("data-id");
+            attractionText.textContent = attractions[attractionId];
+          });
+
+          item.addEventListener("mouseout", () => {
+            attractionText.textContent = "";
+          });
+        });
+      </script>
+
+    </div>
+  </div>
+</div>
+</section>
+<section class="sec-3">
+<!-- Karaganda Section -->
+<div class="container animate" style="background-color: lightblue">
+  <div class="row">
+    <div class="col-md-6 animate">
+      <div class="card"><img
+        src="https://avatars.mds.yandex.net/i?id=9f9395b9453edbd26003f2c3ee16ed6e47c9ad36-10850463-images-thumbs&n=13">
+        <div class="card-body" style="background-color: lightblue">
+          <button class="btn btn-info">Karaganda</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 animate">
+      <ul class="list-group list-group-horizontal">
+        <!-- List items for Karaganda -->
+        <li class="list-group-item list-group-item-info" data-id="1">Historical monuments
+        </li>
+        <li class="list-group-item list-group-item-info" data-id="2">Ski resorts
+        </li>
+        <li class="list-group-item list-group-item-info" data-id="3">Methnographic complex "Kazakh Village"
+          classes.
+        </li>
+      </ul>
+      <div class="attraction-descriptionKaragandy">
+        <p class="attraction-textKaragandy"></p>
+      </div>
+
+      <script>
+        const attractionsKaragandy = {
+          1: "Historical monuments: Karaganda is rich in historical monuments, including the Karaganda City Museum and the monument of the Kazakh SSR.",
+          2: "Ski resorts: Near the city there are ski resorts such as Karaganda Bekmes and Shakhty Mountains, which attract outdoor enthusiasts.",
+          3: "Methnographic complex Kazakh Village: Here tourists can immerse themselves in the culture and traditions of the Kazakh people by visiting ethnographic exhibitions and master classes.",
+        };
+
+        const listItemsKaragandy = document.querySelectorAll(".list-group-item");
+        const attractionTextKaragandy = document.querySelector(".attraction-textKaragandy");
+
+        listItemsKaragandy.forEach(item => {
+          item.addEventListener("mouseover", () => {
+            const attractionId = item.getAttribute("data-id");
+            attractionTextKaragandy.textContent = attractionsKaragandy[attractionId];
+          });
+
+          item.addEventListener("mouseout", () => {
+            attractionTextKaragandy.textContent = "";
+          });
+        });
+      </script>
+    </div>
+  </div>
+</div>
+</section>
+  <!-- Container for displaying advantages -->
+  <div class="bebe1">
+    <p class="bebe">Our motto</p></div>
+  <div class="advantage-container">
+    <div class="advantage">
+      <div class="icon fast-icon"></div>
+      <h3>Quick</h3>
+      <p>We will organize your trip quickly and without unnecessary hassle.</p>
+    </div>
+    <div class="advantage">
+      <div class="icon convenient-icon"></div>
+      <h3>Comfort</h3>
+      <p>We provide convenient options for choosing a location and hotel.</p>
+    </div>
+    <div class="advantage">
+      <div class="icon safe-icon"></div>
+      <h3>Safe</h3>
+      <p>Your safety is our priority. We take care of you on your journey.</p>
+    </div>
+    <div class="advantage">
+      <div class="icon affordable-icon"></div>
+      <h3>Cheap</h3>
+      <p>Our prices are always favorable and affordable. Save with us!</p>
+    </div>
+  </div>
+<div id="buynow2"></div>
+  <!-- User Registration Form -->
+  <div class="container">
+    <form id="myForm" onsubmit="return validateForm()">
+      <div class="mb-3 mt-3">
+        <input type="text" class="form-control" id="name" placeholder="Your name"><span id="nameError"
+                                                                                        class="error"></span><br>
+
+        <label for="comment">
+          <dl>
+            <dt>Comments and your wishes:</dt>
+          </dl>
+        </label>
+        <textarea class="form-control" rows="6" id="comment" name="text"></textarea><span id="commentError"
+                                                                                          class="error"></span>
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="myBtn" data-bs-toggle="tooltip" title="Hooray!">Submit</button>
+    </form>
+  </div>
+
+
+<script>
+  function validateForm() {
+    // Reset error messages
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("commentError").innerHTML = "";
+
+    // Get the form input values
+    var name = document.getElementById("name").value;
+    var comment = document.getElementById("comment").value;
+
+    // Perform validation
+    var valid = true;
+    if (name.trim() === "") {
+      document.getElementById("nameError").innerHTML = "Name is required";
+      valid = false;
+    }
+    if (comment.trim() === "") {
+      document.getElementById("commentError").innerHTML = "Comments are required";
+      valid = false;
+    }
+
+    // If the form is not valid, prevent submission
+    if (!valid) {
+      return false;
+    } else {
+      // If the form is valid, change the button text to "Submitted"
+      const button = document.getElementById('myBtn');
+      button.textContent = 'Submitted!';
+      alert("Your message is not saved")
+      button.disabled = true; // Disable the button to prevent further submissions
+
+
+      setTimeout(function() {
+        document.getElementById('myForm').submit();
+      }, 3000);
+
+      return false; // Prevent immediate form submission
+    }
+  }
+</script>
+<script src="anima.js"></script>
+<script src="scriptt.js"></script>
 </body>
 </html>

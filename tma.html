@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>TPK</title>
+  <title>BNM</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/x-icon" href="img_1.png">
+
+  <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/008/994/746/original/bnm-logo-bnm-letter-bnm-letter-logo-design-initials-bnm-logo-linked-with-circle-and-uppercase-monogram-logo-bnm-typography-for-technology-business-and-real-estate-brand-vector.jpg">
 </head>
 <body style="overflow-x: hidden">
+<!-- This div contains a button and a header -->
 <div class="qwerty"><p id="hoho">BNM</p>
   <button id="qwerty1" style="width: 150px;height: 75px;font-size: 18px;font-family: Consolas-sans-serif"
           onclick="document.location='#main'">
-    <a href="Page1.html"> Main Page</a>
+    <a href="Page1.html"> Main Page</a> <!-- Displays a button that navigates to "Main Page" -->
   </button>
+  <!-- This div contains a button and is hidden initially -->
   <div id="main">
     <button id="qwerty3" style="width: 150px;height: 75px;font-size: 18px;font-family: Consolas-sans-serif"
             onclick="document.location='#aboutus'">
-      About us
+      About us <!-- Displays a button that navigates to "About us" -->
     </button>
   </div>
 </div>
 <section>
-  <div class="has1"><h1><strong>KAZAKH TRAVEL</strong></h1>
+  <div class="has1"><h1><strong>KAZAKH TRAVEL</strong></h1><!-- Displays a button that navigates to "Main Page" -->
     <div class="has"><img src="https://photocentra.ru/images/main58/588196_main.jpg"
                           width="1628" height="710"></div>
   </div>
@@ -28,6 +31,43 @@
     <br>
     Discover its hidden wonders and be inspired by the endless possibilities.</h2>
 </section>
+<div>
+  <canvas id="myChart"></canvas></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar', // You can choose different chart types, like 'bar', 'line', 'pie', etc.
+    data: {
+      labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      datasets: [{
+        label: "Number of tourists",
+        backgroundColor: 'rgba(0, 0, 255, 0.5)', // Custom background color with transparency
+        borderColor: 'rgba(75, 192, 192, 1)', // Custom border color
+        borderWidth: 1, // Border width
+        data: [3, 6, 10, 7, 12, 20, 30, 56, 27, 35, 10],
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+<br>
+<div class="welcome">
+  <button  id="playSoundButton">Welcome</button>
+</div>
+<script>
+  var audio = new Audio('welcome.mp3');
+  document.getElementById('playSoundButton').addEventListener('click', function() {
+    audio.play();
+  });
+</script>
 <div class="container2">
   <table class="custom-table">
     <thead>
@@ -39,8 +79,10 @@
     <tr>
       <td>
         <button onclick="document.location='#yakor2'">Astana</button>
+        <!-- Creates a button that navigates to "Astana" -->
       </td>
     </tr>
+    <!-- Additional rows with buttons for different cities -->
     <tr>
 
       <td>
@@ -101,7 +143,26 @@
     <figcaption>Map of KZ</figcaption>
   </figure>
 </div>
-
+<hr>
+<!-- Creates a "To-Do List" section with a header, input, and a list of items -->
+<hr>
+<div id="todo" class="header">
+  <h2>List of cities where you have visited and would like to visit</h2>
+  <input type="text" id="myInput" class="int">
+  <span class="addBtn" onclick="newElement()">Add</span>
+</div>
+<ul id="myUl" class="myul">
+  <li class="checked">Astana</li>
+  <li>Almaty</li>
+  <li>Aktobe</li>
+  <li>Karagandy</li>
+  <li>Kostanai</li>
+  <li>Aktau</li>
+  <li>Uralsk</li>
+  <li>Atyrau</li>
+</ul>
+<script src="script.js"></script>
+<hr>
 <div id="yakor"></div>
 <div class="almaty">
   <h3>1. Almaty: <br>
@@ -114,6 +175,7 @@
       width="450" height="250">
 
     </div>
+    <!-- Additional sections for other cities with descriptions and images -->
   </h3>
 </div>
 <div id="yakor2"></div>
@@ -196,6 +258,8 @@
       width="450" height="250"></div>
   </h3>
 </div>
+<a href="quiz.html" class="buton" style="text-align: center;justify-items: center;justify-content: center;align-items: center">Quiz</a>
+<!-- Embeds a YouTube video -->
 <br>
 <iframe src="https://www.youtube.com/embed/F0hsjrcyBUw" title="beka" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -204,30 +268,78 @@
 <div class="hh"></div>
 <br> <br>
 <div class="form">
-  <form><label for="name">Your name:</label><br> <input type="text" id="name" name="name"><br> <label for="email">
-    Your email:</label><br> <input type="text" id="email" name="email"><br> <label>Your message:</label>
-    <br><textarea rows="8" maxlength="3000"></textarea> <br>
-    <button onclick="document.getElementById('dia').showModal()">Send Message</button>
+  <form id="myForm" onsubmit="return validateForm()">
+    <label for="name">Your name:</label><br>
+    <input type="text" id="name" name="name"><span id="nameError"></span><br>
+    <label for="email">Your email:</label><br>
+    <input type="text" id="email" name="email"><span id="emailError"></span><br>
+    <label>Your message:</label><br>
+    <textarea id="message" rows="8" maxlength="3000"></textarea><br>
+    <button type="submit" id="myBtn" onclick="myAlert()">Send Message</button>
   </form>
 </div>
-<dialog id="dia"><h2>Succeseful registered</h2>
-  <button onclick="document.querySelector('dialog').close()">ok</button>
-</dialog>
+
+<script>
+  function validateForm() {
+    // Reset error messages
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+
+    // Get the form input values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+
+    // Create a regular expression to validate email
+    var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+    // Perform validation
+    var valid = true;
+    if (name.trim() === "") {
+      document.getElementById("nameError").innerHTML = "Name is required";
+      valid = false;
+    }
+    if (!email.match(emailRegex)) {
+      document.getElementById("emailError").innerHTML = "Invalid email address";
+      valid = false;
+    }
+    if (!valid) {
+
+      return false;
+    } else {
+      // If the form is valid, change the button text to "Submitted"
+      const button = document.getElementById('myBtn');
+      button.textContent = 'Sent!';
+      alert("Your message is saved")
+      button.disabled = true;
+
+
+      setTimeout(function () {
+        document.getElementById('myForm').submit();
+      }, 3000);
+
+      return false;
+    }
+  }
+</script>
+
+<!-- List of links to social media profiles -->
 <br>
 <div class="copy">
   <hr>
   <h3>Copyright &copy; 2023 BNM</h3>
   <br>
-  <ul>
+  <ol>
+    <!-- List of links to social media profiles -->
     <li><h4>&#9745; <a href="https://www.instagram.com/https.b_n_m_">Instagram</a></h4></li>
     <li><h4>&#9745; <a href="https://mail.google.com/mail/u/">Gmail</a></h4></li>
     <li><h4>&#9745; <a href="https://t.me/+fQpwMm7N3V4wZDYy">Telegram</a></h4></li>
-  </ul>
+  </ol>
 
   <div id="aboutus"></div>
   <h3> &#9733; About us: </h3>
 
   <ol>
+    <!-- List of team members -->
     <li><h4>&#9813; Sailaubayeva Nargiza</h4></li>
     <li><h4>&#9775; Kanat Begarys</h4></li>
     <li><h4>&#9882; Shakirova Merey</h4></li>

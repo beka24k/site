@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page1 for quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Ready to plan your trip?</h1>
+<p>Choose a city to visit:</p>
+<div class="background"></div>
+<div class="options">
+  <div id="left">
+    <div class="city" draggable="true"><img src="choose.png">KARAGANDA</div>
+    <div class="city" draggable="true"><img src="choose.png">ALMATY</div>
+    <div class="city" draggable="true"><img src="choose.png">ASTANA</div>
+    <div class="city" draggable="true"><img src="choose.png">ORAL</div>
+    <div class="city" draggable="true"><img src="choose.png">AQTAU</div>
+    <div class="city" draggable="true"><img src="choose.png">AQTOBE</div>
+    <div class="city" draggable="true"><img src="choose.png">ATYRAU</div>
+    <div class="city" draggable="true"><img src="choose.png">QOSTANAI</div>
+  </div>
+  <div id="right">  <img src="img.png" style="height: 150px; width: 150px;opacity: 0.5"></div>
+</div>
+
+
+<script>
+  let cities = document.getElementsByClassName("city");
+  let rightBox = document.getElementById("right");
+  let leftBox = document.getElementById("left");
+  for(city of cities){
+    city.addEventListener("dragstart", function(e){
+      let selected = e.target;
+      rightBox.addEventListener("dragover", function(e){
+        e.preventDefault();
+      });
+      rightBox.addEventListener("drop", function(e){
+        rightBox.appendChild(selected);
+        selected = null;
+      });
+      leftBox.addEventListener("dragover", function(e){
+        e.preventDefault();
+      });
+      leftBox.addEventListener("drop", function(e){
+        leftBox.appendChild(selected);
+        selected = null;
+      });
+    });
+  }
+</script>
+</body>
+</html>
+
+

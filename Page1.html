@@ -6,9 +6,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="icon" type="image/x-icon" href="img_1.png">
+  <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/008/994/746/original/bnm-logo-bnm-letter-bnm-letter-logo-design-initials-bnm-logo-linked-with-circle-and-uppercase-monogram-logo-bnm-typography-for-technology-business-and-real-estate-brand-vector.jpg">
 </head>
 <body>
+<input type="number" class="time">
+<button type="submit" onclick="startCountdown()">Start</button>
+<button type="reset" onclick="resetCountdown()">Reset</button>
+<p class="countdown"></p>
+<!-- Navigation Bar for Menu -->
 <nav class="navbar navbar-expand-sm" style="background-color: #10AAB8">
   <div class="container">
     <div class="nav-header">
@@ -26,7 +31,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#yakor789" style="color: #fcc06e">Uralsk</a>
       </li>
+      <li class="nav-item">  <a href="#buynow1" class="buton nav-link" style="background-color: #b3d4fc"><span>Buy now</span></a></li>
       <li class="nav-item">
+        <!-- Dropdown Menu for Travel Links -->
         <div class="dropdown">
           <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">Travel
           </button>
@@ -46,6 +53,7 @@
     </ul>
   </div>
 </nav>
+<!-- Image Carousel for Cities -->
 <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
   <div class="carousel-indicators">
@@ -84,7 +92,7 @@
       </div>
     </div>
   </div>
-
+  <!-- Carousel Controls -->
   <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
@@ -93,161 +101,335 @@
   </button>
 </div>
 <hr>
+
+<div id="tabs">
+  <button id="tab1" class="tab-button">Aktobe</button>
+  <button id="tab2" class="tab-button">Aktau</button>
+  <button id="tab3" class="tab-button">Uralsk</button>
+</div>
+<div id="content">
+  <div id="tab-content-1" class="tab-content" style="color:#fcc06e">Aktobe  is a city on the Ilek River in Kazakhstan.</div>
+  <div id="tab-content-2" class="tab-content" style="color:#fcc06e">Aktau is a city in Kazakhstan, located on the eastern shore of the Caspian Sea.</div>
+  <div id="tab-content-3" class="tab-content" style="color:#fcc06e">Oral is a city in northwestern Kazakhstan, at the confluence of the Ural and Chagan rivers close to the Russian border.</div>
+</div>
+<hr>
+<button class="accordion">Aktobe</button>
+<div class="panel">
+  <p></p>
+</div>
+
+<button class="accordion">Aktau</button>
+<div class="panel">
+  <p></p>
+</div>
+
+<button class="accordion">Uralsk</button>
+<div class="panel">
+  <p></p>
+</div>
+
+<script>
+  var cities = {
+    "Aktobe": "Aktobe, situated in the western part of Kazakhstan, is a bustling city known for its economic significance.",
+    "Aktau": "Aktau, located on the shores of the Caspian Sea in southwestern Kazakhstan, is a unique and rapidly developing city.",
+    "Uralsk": "Uralsk, situated in northwestern Kazakhstan, is a city rich in history and culture."
+  };
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      var city = this.textContent.trim();
+      panel.innerHTML = "<p>" + cities[city] + "</p>";
+
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+<script>
+  // Get all tab buttons and tab contents
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  // Add a click event listener to each tab button
+  tabButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      // Hide all tab contents
+      tabContents.forEach(content => content.style.display = 'none');
+      // Show the selected tab content
+      tabContents[index].style.display = 'block';
+    });
+  });
+
+</script>
+
+
+<!-- City Information Sections -->
+<hr>
 <br>
-<div class="mb-3">
-  <div class="container" style="background-color: #b3d4fc">
+
+  <section class="sec-1 show-animate">
+  <!-- Aktobe Section -->
+  <div class="container animate" style="background-color: #b3d4fc">
     <div id="yakor123"></div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 animate">
         <h6>
-          <div class="card text-#966303 " style="background-color: #FFF3CD">
+          <div class="card  " style="background-color: white; color:#10AAB8">
             <div class="card-body">
-             Aktobe, situated in the western part of Kazakhstan, is a hub for various industries,
-              including oil and gas, manufacturing, and agriculture, contributing to the country's economic growth.
-              The city also boasts a rich cultural scene with theaters, museums, and historical sites like
-              the Aktobe Regional History Museum. Visitors can immerse themselves in the region's heritage
-              and traditions. Aktobe natural beauty is another attraction, with the picturesque Ilek River
-                and proximity to Aktolagay National Park, making it an ideal destination for outdoor enthusiasts.
+              Aktobe, situated in the western part of Kazakhstan, is a bustling city known for its economic significance. It's a hub for various industries, including oil and gas, manufacturing, and agriculture, contributing to the country's economic growth.
             </div>
           </div>
         </h6>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 animate">
         <h6>
+          <!-- List of Aktobe Attractions -->
           <ul class="list-group">
-            <li class="list-group-item list-group-item-warning">Museum of Local Lore and History: This museum provides a
-              deep dive into Aktobe's history, culture, and traditions. It houses a diverse collection of artifacts,
-              including archaeological finds, ethnographic displays, and items from the region's nomadic past.
-            </li>
-            <li class="list-group-item list-group-item-danger">Aktobe Regional Drama Theater: A hub for performing arts,
-              this theater hosts a range of cultural performances, including theatrical productions, ballet, and musical
-              events. It's a great place to experience the local arts scene.
-            </li>
-            <li class="list-group-item list-group-item-warning">Kobyz Museum: This unique museum is dedicated to the kobyz,
-              a traditional Kazakh musical instrument. Visitors can explore the instrument's history, craftsmanship, and
-              significance in Kazakh culture.
-            </li>
-            <li class="list-group-item list-group-item-danger">Ilek River: The Ilek River, which flows near Aktobe,
-              offers a serene and picturesque setting for outdoor activities. Visitors can enjoy picnicking, fishing,
-              and hiking along the riverbanks.
-            </li>
+            <li class="list-group-item" data-id="1" style="background-color: #10AAB8; color:white">Museum of Local Lore and History</li>
+            <li class="list-group-item" data-id="2" style="background-color: white; color:#10AAB8">Aktobe Regional Drama Theater</li>
+            <li class="list-group-item" data-id="3" style="background-color: #10AAB8; color:white">Kobyz Museum</li>
+            <li class="list-group-item" data-id="4" style="background-color: white; color:#10AAB8">Ilek River</li>
           </ul>
         </h6>
       </div>
+
+      <div id="attraction-description">
+        <p id="attraction-text" style="background: white; color: #10AAB8;font-weight: bold"></p>
+      </div>
+
+      <script>
+        const attractions = {
+          1: "Museum of Local Lore and History: This museum provides a deep dive into Aktobe's history, culture, and traditions. It houses a diverse collection of artifacts, including archaeological finds, ethnographic displays, and items from the region's nomadic past.",
+          2: "Aktobe Regional Drama Theater: A hub for performing arts, this theater hosts a range of cultural performances, including theatrical productions, ballet, and musical events. It's a great place to experience the local arts scene.",
+          3: "Kobyz Museum: This unique museum is dedicated to the kobyz, a traditional Kazakh musical instrument. Visitors can explore the instrument's history, craftsmanship, and significance in Kazakh culture.",
+          4: "Ilek River: The Ilek River, which flows near Aktobe, offers a serene and picturesque setting for outdoor activities. Visitors can enjoy picnicking, fishing, and hiking along the riverbanks."
+        };
+
+        const listItems = document.querySelectorAll(".list-group-item");
+        const attractionText = document.getElementById("attraction-text");
+
+        listItems.forEach(item => {
+          item.addEventListener("mouseover", () => {
+            const attractionId = item.getAttribute("data-id");
+            attractionText.textContent = attractions[attractionId];
+          });
+
+          item.addEventListener("mouseout", () => {
+            attractionText.textContent = "";
+          });
+        });
+      </script>
     </div>
-  </div>
-  <div class="container" style="background-color: #b3d4fc">
+    </div>
+</section>
+<section class="sec-2">
+  <!-- Aktau Section -->
+  <div class="container animate" style="background-color: #b3d4fc">
     <div id="yakor456"></div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 animate">
         <h6>
-          <div class="card text- #966303" style="background-color: #F8D7DA">
-            <div class="card-body">Aktau, located on the shores of the Caspian Sea in southwestern Kazakhstan, is a
-              unique and rapidly
-              developing city. It serves as a major port city and a key gateway for transportation and trade,
-              particularly
-              in the oil and gas industry, owing to its strategic location.
-              The city offers stunning coastal views, with its beaches along the Caspian Sea providing residents and
-              visitors alike with opportunities for relaxation and water-based activities.
-              Aktau is known for its distinctive architecture, with many modern and avant-garde buildings dotting the
-              cityscape. The Kazakh Eli (Kazakh Country) monument, resembling a golden sail, stands as an iconic symbol
-              of
-              the city's aspirations and connection to the sea.
-              This thriving urban center blends a modern and cosmopolitan atmosphere with the natural beauty of its
-              coastal
-              setting, making Aktau a unique and promising destination in Kazakhstan
+          <div class="card " style="background-color: white; color:#10AAB8">
+            <div class="card-body">Aktau, located on the shores of the Caspian Sea in southwestern Kazakhstan, is a unique and rapidly developing city. It serves as a major port city and a key gateway for transportation and trade, particularly in the oil and gas industry, owing to its strategic location.
             </div>
           </div>
         </h6>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 animate">
+        <!-- List of Aktau Attractions -->
         <h6>
           <ul class="list-group">
-            <li class="list-group-item list-group-item-warning">Shevchenko Alley: A scenic promenade along the Caspian Sea,
-              Shevchenko Alley is a popular spot for leisurely walks and enjoying breathtaking sunsets over the sea.
-              It's an ideal place for relaxation and taking in the coastal views.
-            </li>
-            <li class="list-group-item list-group-item-danger">Beket-Ata Underground Mosque: Located about 70 kilometers
-              from Aktau, this unique mosque is situated within a natural cave system. It's a place of pilgrimage and
-              spiritual significance for many Kazakh Muslims.
-            </li>
-            <li class="list-group-item list-group-item-warning">Caspian Sea Beaches: Aktau's coastline boasts numerous
-              sandy beaches where visitors can relax and soak up the sun. The warm summer months are perfect for
-              beachgoers looking to enjoy the Caspian Sea's waters.
-            </li>
-            <li class="list-group-item list-group-item-danger">Mangistau Regional History Museum: This museum provides
-              insight into the history, culture, and traditions of the Mangistau region. It houses a diverse collection
-              of artifacts, including archaeological finds and items related to the region's nomadic past.
-            </li>
+            <li class="list-group-item" data-id="1" style="background-color: #10AAB8; color:white">Shevchenko Alley</li>
+            <li class="list-group-item" data-id="2" style="background-color: white; color:#10AAB8">Beket-Ata Underground Mosque</li>
+            <li class="list-group-item" data-id="3" style="background-color: #10AAB8; color:white">Caspian Sea Beaches</li>
+            <li class="list-group-item" data-id="4" style="background-color: white; color:#10AAB8">Mangistau Regional History Museum</li>
           </ul>
         </h6>
       </div>
+
+      <div class="attraction-descriptionAktau">
+        <p class="attraction-textAktau" style="background: white; color: #10AAB8; font-weight: bold;"></p>
+      </div>
+
+      <script>
+        const attractionsAktau = {
+          1: "Shevchenko Alley: A scenic promenade along the Caspian Sea, Shevchenko Alley is a popular spot for leisurely walks and enjoying breathtaking sunsets over the sea. It's an ideal place for relaxation and taking in the coastal views.",
+          2: "Beket-Ata Underground Mosque: Located about 70 kilometers from Aktau, this unique mosque is situated within a natural cave system. It's a place of pilgrimage and spiritual significance for many Kazakh Muslims.",
+          3: "Caspian Sea Beaches: Aktau's coastline boasts numerous sandy beaches where visitors can relax and soak up the sun. The warm summer months are perfect for beachgoers looking to enjoy the Caspian Sea's waters.",
+          4: "Mangistau Regional History Museum: This museum provides insight into the history, culture, and traditions of the Mangistau region. It houses a diverse collection of artifacts, including archaeological finds and items related to the region's nomadic past."
+        };
+
+        const listItemsAktau = document.querySelectorAll(".list-group-item");
+
+        listItemsAktau.forEach(item => {
+          item.addEventListener("mouseover", () => {
+            const attractionId = item.getAttribute("data-id");
+            document.querySelector(".attraction-descriptionAktau .attraction-textAktau").textContent = attractionsAktau[attractionId];
+          });
+
+          item.addEventListener("mouseout", () => {
+            document.querySelector(".attraction-descriptionAktau .attraction-textAktau").textContent = "";
+          });
+        });
+      </script>
     </div>
   </div>
-  <div class="container" style="background-color: #b3d4fc">
+</section>
+<section class="sec-3">
+  <!-- Uralsk Section -->
+  <div class="container animate" style="background-color: #b3d4fc">
     <div id="yakor789"></div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 animate">
         <h6>
-          <div class="card text- #966303" style="background-color: #FFF3CD">
-            <div class="card-body">Uralsk, situated in northwestern Kazakhstan, is a city rich in history and culture.
-              It serves as the
-              administrative center of the West Kazakhstan Region and has played a pivotal role in the region's
-              development.
-              One of the city's most prominent landmarks is the Zhansaya Mosque, a striking architectural masterpiece
-              that
-              represents the Islamic heritage of Uralsk. The city also features historical sites like the Ural River and
-              Zhaiyk River embankment, where you can enjoy scenic views and take leisurely strolls.
-              Uralsk is known for its diverse cultural scene, with theaters, museums, and art galleries that showcase
-              Kazakh
-              traditions and contemporary creativity. The city's location near the Ural River adds to its natural beauty
-              and
-              provides opportunities for outdoor activities and recreation.
+          <div class="card" style="background-color: white; color:#10AAB8 ">
+            <div class="card-body"> Uralsk, situated in northwestern Kazakhstan, is a city rich in history and culture. It serves as the administrative center of the West Kazakhstan Region and has played a pivotal role in the region's development.
             </div>
+            <div class="welcome">
+              <button  id="playSoundButton" style="background-color: #10AAB8">Oral</button>
+            </div>
+            <script>
+              var audio = new Audio('oral.mp3');
+
+              document.getElementById('playSoundButton').addEventListener('click', function() {
+                audio.play();
+              });
+            </script>
           </div>
         </h6>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 animate">
         <h6>
+          <!-- List of Uralsk Attractions -->
           <ul class="list-group">
-            <li class="list-group-item list-group-item-warning">Zhansaya Mosque: This stunning mosque stands as a symbol of
-              Islamic heritage in Uralsk. Its unique architecture and serene ambiance make it a notable religious and
-              architectural site.
-            </li>
-            <li class="list-group-item list-group-item-danger">Uralsk Drama Theater: Enjoy a cultural evening at the
-              Uralsk Drama Theater, where you can watch theatrical performances, musicals, and other artistic
-              productions.
-            </li>
-            <li class="list-group-item list-group-item-warning">Ural River Embankment: The picturesque Ural River runs
-              through the city, and its embankment is a lovely place for a leisurely stroll or a peaceful evening by the
-              water. It provides stunning views of the river and serves as a popular gathering spot.
-            </li>
-            <li class="list-group-item list-group-item-danger">Zhylyoi National Park: Located nearby, Zhylyoi National
-              Park is a natural wonder with unique geological formations, including the striking "Ustyurt Plateau." The
-              park is a paradise for nature enthusiasts, offering opportunities for hiking, birdwatching, and
-              photography.
-            </li>
+            <li class="list-group-item" data-id="1" style="background-color: #10AAB8; color:white">Zhansaya Mosque</li>
+            <li class="list-group-item" data-id="2" style="background-color: white; color:#10AAB8">Uralsk Drama Theater</li>
+            <li class="list-group-item" data-id="3" style="background-color: #10AAB8; color:white">Ural River Embankment</li>
+            <li class="list-group-item" data-id="4" style="background-color: white; color:#10AAB8">Zhylyoi National Park</li>
           </ul>
         </h6>
       </div>
+      <div class="attraction-descriptionUralsk">
+        <p class="attraction-textUralsk" style="background: white; color: #10AAB8; font-weight: bold;"></p>
+      </div>
+
+      <script>
+        const attractionsUralsk = {
+          1: "Zhansaya Mosque: This beautiful mosque, with its elegant architecture and peaceful atmosphere, is a symbol of the city's Islamic heritage. Visitors can appreciate its intricate design and serenity.",
+          2: "Uralsk Drama Theater: Enjoy cultural performances, including theatrical productions, musicals, and concerts, at the Uralsk Drama Theater. It's a hub for the city's artistic and cultural scene.",
+          3: "Ural River Embankment: The picturesque Ural River runs through the city, and its embankment is a lovely place for a leisurely stroll or a peaceful evening by the water. It provides stunning views of the river and serves as a popular gathering spot.",
+          4: "Zhylyoi National Park: It is a natural wonder with unique geological formations, including the striking Ustyurt Plateau. The park is a paradise for nature enthusiasts, offering opportunities for hiking, birdwatching, and photography."
+        };
+
+        const listItemsUralsk = document.querySelectorAll(".list-group-item");
+
+        listItemsUralsk.forEach(item => {
+          item.addEventListener("mouseover", () => {
+            const attractionId = item.getAttribute("data-id");
+            document.querySelector(".attraction-descriptionUralsk .attraction-textUralsk").textContent = attractionsUralsk[attractionId];
+          });
+
+          item.addEventListener("mouseout", () => {
+            document.querySelector(".attraction-descriptionUralsk .attraction-textUralsk").textContent = "";
+          });
+        });
+      </script>
     </div>
   </div>
 </div>
+</section>
 <hr>
+<div id="buynow1"></div>
+<!-- Container for displaying advantages -->
+<div class="bebe1">
+  <p class="bebe">Our motto</p></div>
+<div class="advantage-container">
+  <div class="advantage">
+    <div class="icon fast-icon"></div>
+    <h3>Quick</h3>
+    <p>We will organize your trip quickly and without unnecessary hassle.</p>
+  </div>
+  <div class="advantage">
+    <div class="icon convenient-icon"></div>
+    <h3>Comfort</h3>
+    <p>We provide convenient options for choosing a location and hotel.</p>
+  </div>
+  <div class="advantage">
+    <div class="icon safe-icon"></div>
+    <h3>Safe</h3>
+    <p>Your safety is our priority. We take care of you on your journey.</p>
+  </div>
+  <div class="advantage">
+    <div class="icon affordable-icon"></div>
+    <h3>Cheap</h3>
+    <p>Our prices are always favorable and affordable. Save with us!</p>
+  </div>
+</div>
+<!-- User Comment Form -->
 <div class="container">
-  <form>
+  <form id="myForm" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
-      <input type="text" class="form-control" placeholder="Your name"><br>
+      <input type="text" class="form-control" id="name" placeholder="Your name"><span id="nameError" class="error"></span><br>
+
       <label for="comment">
         <dl>
           <dt>Comments and your wishes:</dt>
         </dl>
       </label>
-      <textarea class="form-control" rows="6" id="comment" name="text"></textarea>
+      <textarea class="form-control" rows="6" id="comment" name="text"></textarea><span id="commentError" class="error"></span>
     </div>
-    <button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" title="Hooray!">Submit</button>
+
+    <button type="submit" class="btn btn-primary" id="myButton" data-bs-toggle="tooltip" title="Hooray!">Submit</button>
   </form>
 </div>
+<script>
+  function validateForm() {
+    // Reset error messages
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("commentError").innerHTML = "";
 
+    // Get the form input values
+    var name = document.getElementById("name").value;
+    var comment = document.getElementById("comment").value;
+
+    // Perform validation
+    var valid = true;
+    if (name.trim() === "") {
+      document.getElementById("nameError").innerHTML = "Name is required";
+      valid = false;
+    }
+    if (comment.trim() === "") {
+      document.getElementById("commentError").innerHTML = "Comments are required";
+      valid = false;
+    }
+
+    // If the form is not valid, prevent submission
+    if (!valid) {
+      return false;
+    } else {
+      // If the form is valid, change the button text to "Submitted"
+      const button = document.getElementById('myButton');
+      button.textContent = 'Submitted!';
+      alert("Your message is saved")
+      button.disabled = true; // Disable the button to prevent further submissions
+
+
+      setTimeout(function() {
+        document.getElementById('myForm').submit();
+      }, 3000);
+
+      return false; // Prevent immediate form submission
+    }
+  }
+</script>
+<script src="anima.js"></script>
+<script src="scriptt.js"></script>
 </body>
 </html>

@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+.start-container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+img {
+  padding:4px;
+  width:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+button {
+  background-color: #004c99;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://img.goodfon.com/original/1920x1408/7/18/leto-gory-cvety-priroda.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#left, #right{
+  width: 300px;
+  min-height:400px;
+  margin: 20px;
+  border: 2px dashed #190033;
+
+}
+.city{
+  background: #004c99;
+  height: 60px;
+  margin: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+.city img{
+  width: 10px;
+  margin-right: 15px;
+  margin-left: 20px;
+  color: #fff;
+
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+button {
+  background-color: #004c99;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://avatars.mds.yandex.net/i?id=84e68b572a9c10656112249811baf8dd71cb821a-5232475-images-thumbs&n=13');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.gid-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#box3 {
+  position: absolute;
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #fff;
+  width: 700px;
+  min-height:500px;
+  top:120px;
+  left: auto;
+  right: auto;
+
+}
+
+#box4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  border: 2px dashed #fff;
+  width: 100%;
+  height: 70vh;
+}
+
+#box5, #box6, #box7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #fff;
+  width: 100%;
+  height: 165px;
+}
+
+#box5 img, #box6 img, #box7 img {
+  max-height: 100%;
+}
+
+.middle-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-column div {
+  margin: 0 8px;
+  border: 2px dashed #fff;
+  width: 10%;
+  height: 30px;
+}
+
+.middle-column div+div {
+  margin-top: 10px;
+}
+.gid{
+  cursor: grab;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+   #box3 {
+       padding: 10px;
+       flex-grow: 1;
+       display: flex;
+       flex-direction: row;
+       border: solid 1px green
+       }
+
+   #box4 {
+       flex-grow: 2;
+       border: solid 1px orange
+       }
+   .middle-column {
+       flex-grow: 1;
+       display: flex;
+       flex-direction: column;
+       }
+
+   .middle-column div {
+       flex-grow: 1;
+       margin: 0 8px;
+       border: solid 1px red;
+       }
+
+   .middle-column div+div {
+       margin-top: 8px
+   }
+*/
+
+
